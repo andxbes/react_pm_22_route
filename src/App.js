@@ -3,10 +3,21 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Products from './pages/Products';
+import Root from './pages/Root';
+import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
-  { path: '/', element: <Home /> },
-  { path: '/products', element: <Products /> }
+  {
+    path: '/',
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      { path: '/', element: <Home /> },
+      { path: '/products', element: <Products /> }
+    ],
+
+  },
+
 ]);
 function App() {
   return <RouterProvider router={router} />;
