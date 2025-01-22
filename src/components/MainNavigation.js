@@ -5,10 +5,10 @@ export default function MainNavigation(params) {
         <nav>
             <ul className={classes.list}>
                 <li>
-                    <NavLink className={({ isActive }) => isActive ? 'active' : null} to="/" end>Home</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? classes.active : null} to="/" end>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink className={({ isActive }) => isActive ? 'active' : null} to="/products">Products</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? classes.active : null} to="/products">Products</NavLink>
                 </li>
             </ul>
         </nav>
