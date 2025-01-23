@@ -11,7 +11,7 @@ export default function Products(params) {
         <h1>The Products Page</h1>
         <ul>
             {PRODUCTS.map((product) => (
-                <li><Link to={product.id}>{product.title}</Link></li>
+                <li key={product.id}><Link to={product.id}>{product.title}</Link></li>
             ))}
         </ul>
     </>;
