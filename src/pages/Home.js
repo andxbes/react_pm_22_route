@@ -5,11 +5,11 @@ export default function Home(params) {
     return <>
         <h1>My home page</h1>
         <p>
-            Go to <Link to="/products">The list of products</Link>
+            Go to <Link to="products">The list of products</Link>
         </p>
         <p>
             <button onClick={() => {
-                navigate('/products');
+                navigate('products');
             }}>Products</button>
         </p>
     </>
